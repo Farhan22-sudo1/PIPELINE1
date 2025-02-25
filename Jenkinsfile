@@ -1,6 +1,10 @@
 pipeline {
     agent any
 
+    tools {
+        nodejs 'Node 14'  // The name you gave to the NodeJS installation in Jenkins global configuration
+    }
+
     stages {
         stage('Checkout') {
             steps {
@@ -11,7 +15,7 @@ pipeline {
 
         stage('Build') {
             steps {
-                // Install Node.js dependencies
+                // Install Node.js dependencies using the NodeJS tool installed in Jenkins
                 sh 'npm install'
             }
         }
