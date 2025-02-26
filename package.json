@@ -17,3 +17,8 @@
     "node": ">=14.0.0"
   }
 }
+"scripts": {
+  "start": "node index.js",
+  "build": "echo 'Building application...'",
+  "test": "echo 'Running tests...'"
+}
