@@ -20,7 +20,8 @@
   }
 }
 
-  "name": "PIPELINE1",
+  {
+    "name": "PIPELINE1",
   "version": "1.0.0",
   "description": "A simple Node.js application",
   "main": "index.js",
