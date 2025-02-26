@@ -1,3 +1,76 @@
-git add package.json package-lock.json
-git commit -m "Add package.json and install dependencies"
-git push origin main
+
+{
+  "name": "system32",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
+
+
+
+
+C:\Windows\System32>npm install express
+
+added 69 packages, and audited 70 packages in 3s
+
+14 packages are looking for funding
+  run `npm fund` for details
+
+found 0 vulnerabilities
+
+C:\Windows\System32>cd C:\Users\Owner\PIPELINE1
+
+C:\Users\Owner\PIPELINE1>cd C:\Users\Owner\PIPELINE1
+
+C:\Users\Owner\PIPELINE1>cd C:\Users\Owner\PIPELINE1
+
+C:\Users\Owner\PIPELINE1>dir
+ Volume in drive C has no label.
+ Volume Serial Number is 0408-896F
+
+ Directory of C:\Users\Owner\PIPELINE1
+
+02/25/2025  11:43 PM    <DIR>          .
+02/25/2025  11:43 PM    <DIR>          ..
+02/25/2025  11:43 PM             1,525 Jenkinsfile
+02/25/2025  11:45 PM               532 package.json
+02/25/2025  11:43 PM                11 README.md
+               3 File(s)          2,068 bytes
+               2 Dir(s)  238,921,248,768 bytes free
+
+C:\Users\Owner\PIPELINE1>npm install express
+
+added 69 packages, and audited 70 packages in 1s
+
+14 packages are looking for funding
+  run `npm fund` for details
+
+found 0 vulnerabilities
+
+C:\Users\Owner\PIPELINE1>type package.json
+{
+    "name": "pipeline1-app",
+    "version": "1.0.0",
+    "description": "A simple Node.js application for Jenkins CI/CD pipeline",
+    "main": "index.js",
+    "scripts": {
+        "start": "node index.js",
+        "build": "echo 'Building the app...'",
+        "test": "echo 'Running tests...' && exit 0"
+    },
+    "keywords": [],
+    "author": "Farhan",
+    "license": "ISC",
+    "dependencies": {
+        "express": "^4.21.2"
+    },
+    "engines": {
+        "node": ">=14.0.0"
+    }
+}
