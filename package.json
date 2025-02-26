@@ -19,3 +19,20 @@
     "node": ">=14.0.0"
   }
 }
+
+  "name": "PIPELINE1",
+  "version": "1.0.0",
+  "description": "A simple Node.js application",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "build": "echo 'Building application...'"
+  },
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {},
+  "author": "Farhan Isaack",
+  "license": "ISC"
+
+}
