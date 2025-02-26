@@ -1,11 +1,12 @@
 {
   "name": "PIPELINE1",
   "version": "1.0.0",
-  "description": "A simple Node.js application for Jenkins CI/CD pipeline",
+  "description": "A simple Node.js application",
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
-    "build": "echo 'Building application...'"
+    "build": "echo 'Building application...'",
+    "test": "echo 'Running tests...'"
   },
   "dependencies": {
     "express": "^4.17.1"
@@ -16,9 +17,4 @@
   "engines": {
     "node": ">=14.0.0"
   }
-}
-"scripts": {
-  "start": "node index.js",
-  "build": "echo 'Building application...'",
-  "test": "echo 'Running tests...'"
 }
