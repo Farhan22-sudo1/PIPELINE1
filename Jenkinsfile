@@ -6,6 +6,10 @@ pipeline {
         BRANCH = 'main'
     }
 
+    tools {
+        nodejs 'NodeJS' // Ensure Jenkins is configured with a NodeJS tool named 'NodeJS'
+    }
+
     stages {
         stage('Checkout') {
             steps {
@@ -13,29 +17,33 @@ pipeline {
             }
         }
 
+        stage('Install Dependencies') {
+            steps {
+                echo 'Installing dependencies...'
+                sh 'npm install'
+            }
+        }
+
         stage('Build') {
             steps {
                 echo 'Building the application...'
-                // Add build commands here
-                // Example for Node.js: sh 'npm install'
-                // Example for Java: sh './gradlew build'
+                sh 'npm run build'
             }
         }
 
         stage('Test') {
             steps {
                 echo 'Running tests...'
-                // Add test commands here
-                // Example for Node.js: sh 'npm test'
-                // Example for Java: sh './gradlew test'
+                sh 'npm test'
             }
         }
 
         stage('Deploy') {
             steps {
                 echo 'Deploying the application...'
-                // Add deployment steps here
+                // Add your deployment steps here
                 // Example: sh 'scp -r * user@server:/path/to/deployment'
+                // Or use a CI/CD tool/service to handle deployment
             }
         }
     }
