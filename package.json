@@ -1,5 +1,5 @@
 {
-<<<<<<< HEAD
+
     "name": "pipeline1-app",
     "version": "1.0.0",
     "description": "A simple Node.js application for Jenkins CI/CD pipeline",
@@ -18,7 +18,7 @@
     "engines": {
         "node": ">=14.0.0"
     }
-=======
+
   "name": "PIPELINE1",
   "version": "1.0.0",
   "description": "A simple Node.js application",
@@ -33,5 +33,5 @@
   "devDependencies": {},
   "author": "Farhan Isaack",
   "license": "ISC"
->>>>>>> eeb8d8ae2f245e2b8a0e68b49b0e04253080c051
+eeb8d8ae2f245e2b8a0e68b49b0e04253080c051
 }
