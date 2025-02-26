@@ -1,44 +1,55 @@
 pipeline {
     agent any
 
-    tools {
-        nodejs 'Node 14'  // The name you gave to the NodeJS installation in Jenkins global configuration
+    environment {
+        REPO_URL = 'https://github.com/Farhan22-sudo1/PIPELINE1.git'
+        BRANCH = 'main'
     }
 
     stages {
         stage('Checkout') {
             steps {
-                // Pull code from GitHub
-                git url: 'https://github.com/Farhan22-sudo1/PIPELINE1.git', branch: 'main'
+                git branch: "${BRANCH}", url: "${REPO_URL}"
             }
         }
 
         stage('Build') {
             steps {
-                // Install Node.js dependencies using the NodeJS tool installed in Jenkins
-                sh 'npm install'
+                echo 'Building the application...'
+                // Add build commands here
+                // Example for Node.js: sh 'npm install'
+                // Example for Java: sh './gradlew build'
             }
         }
 
         stage('Test') {
             steps {
-                // Run tests
-                sh 'npm test'
+                echo 'Running tests...'
+                // Add test commands here
+                // Example for Node.js: sh 'npm test'
+                // Example for Java: sh './gradlew test'
             }
         }
 
         stage('Deploy') {
             steps {
-                // Deploy the app (for example, using SCP to transfer files)
-                sh 'scp -r ./dist/* user@server:/var/www/html'
+                echo 'Deploying the application...'
+                // Add deployment steps here
+                // Example: sh 'scp -r * user@server:/path/to/deployment'
             }
         }
     }
 
     post {
         always {
-            // Clean up workspace after pipeline is done
+            echo 'Cleaning up...'
             cleanWs()
+        }
+        success {
+            echo 'Pipeline completed successfully!'
+        }
+        failure {
+            echo 'Pipeline failed. Check the logs for more details.'
         }
     }
 }
