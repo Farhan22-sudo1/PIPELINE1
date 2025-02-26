@@ -1,36 +1,15 @@
-
 {
-  "name": "system32",
+  "name": "PIPELINE1",
   "version": "1.0.0",
+  "description": "A simple Node.js application",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node index.js"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "description": ""
-}
-
-
-
-{
-    "name": "pipeline1-app",
-    "version": "1.0.0",
-    "description": "A simple Node.js application for Jenkins CI/CD pipeline",
-    "main": "index.js",
-    "scripts": {
-        "start": "node index.js",
-        "build": "echo 'Building the app...'",
-        "test": "echo 'Running tests...' && exit 0"
-    },
-    "keywords": [],
-    "author": "Farhan",
-    "license": "ISC",
-    "dependencies": {
-        "express": "^4.21.2"
-    },
-    "engines": {
-        "node": ">=14.0.0"
-    }
+  "dependencies": {
+    "express": "^4.21.2"
+  },
+  "devDependencies": {},
+  "author": "Farhan Isaack",
+  "license": "ISC"
 }
